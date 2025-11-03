@@ -3,9 +3,11 @@ import { DollarSign, Pin, Users } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui';
 
 import ListingCardImages from './ListingsCardImages';
+import { Link } from 'react-router-dom';
 
 const ListingCard = ({ listing }) => {
   return (
+    <Link to={`/listings/${listing.id}`}>
     <Card className='w-[320px]'>
       <ListingCardImages listing={listing} />
       <CardContent className='flex flex-col gap-2 p-4'>
@@ -28,7 +30,7 @@ const ListingCard = ({ listing }) => {
           </span>
         </div>
       </CardContent>
-    </Card>
+    </Card></Link>
   );
 };
 
