@@ -2,15 +2,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import HomePage from '@/pages/HomePage';
 import ListingDetailsPage from '@/pages/ListingDetailsPage';
+import ListingFavoritesPage from '@/pages/ListingFavoritesPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 import App from './App';
-import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement:<NotFoundPage/>,
+    errorElement: <NotFoundPage />,
     children: [
       {
         path: '/',
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/listings/:listingId',
         element: <ListingDetailsPage />,
+      },
+      {
+        path: '/favorites',
+        element: <ListingFavoritesPage />,
       },
     ],
   },
