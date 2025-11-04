@@ -6,6 +6,9 @@ import { Separator, Spinner } from '@/components/ui';
 import useFetch from '@/hooks/useFetch';
 
 const HomePage = () => {
+
+
+
   const [filters, setFilters] = useState({
     dates: undefined,
     guests: 0,
